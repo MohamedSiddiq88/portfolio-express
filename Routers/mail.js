@@ -3,7 +3,10 @@ import bcrypt from "bcrypt"
 import crypto from "crypto"
 import nodemailer from "nodemailer";
 
-router.post("/checkmail",async(req,res)=>{
+const router=express.Router();
+
+
+router.post("/sendmail",async(req,res)=>{
     try {
         //is user available 
         const name =await getUser(req.body.name)
