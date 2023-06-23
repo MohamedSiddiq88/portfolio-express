@@ -1,6 +1,4 @@
 import express from "express"
-import bcrypt from "bcrypt"
-import crypto from "crypto"
 import nodemailer from "nodemailer";
 
 const router=express.Router();
@@ -9,10 +7,10 @@ const router=express.Router();
 router.post("/sendmail",async(req,res)=>{
     try {
         //is user available 
-        const name =await getUser(req.body.name)
-        const mail =await getUser(req.body.mail)
-        const subject =await getUser(req.body.subject)
-        const message =await getUser(req.body.message)
+        const name =req.body.name
+        const mail =req.body.email
+        const subject =req.body.subject
+        const message =req.body.message
 
         if(!(name || mail || subject || message)){
         return res.status(400).json({data:"invalid"})
