@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv"
 import { usersRouter } from "./Routers/users.js";
 import cors from "cors";
+import { mailRouter } from "./Routers/mail.js";
 
 
 
@@ -20,6 +21,8 @@ app.get("/",(req,res)=>{
     res.send("Welocome to Portfolio World")
 })
 app.use("/users",usersRouter)   
+app.use("/sendmail",mailRouter)   
+
 
 
 

@@ -39,3 +39,6 @@ router.post("/checkmail",async(req,res)=>{
     res.status(500).json("internal server error");
   }
 })
+
+
+export const mailRouter = router;
