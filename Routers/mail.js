@@ -20,8 +20,8 @@ router.post("/checkmail",async(req,res)=>{
     let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "dingdong88700@gmail.com",
-          pass: "hoboxnbprolqybsn",
+            user: process.env.GMAIL_EMAIL,
+            pass: process.env.GMAIL_PASSWORD,
         },
       });
   
