@@ -27,7 +27,7 @@ router.post("/sendmail",async(req,res)=>{
       });
   
       let info = await transporter.sendMail({
-        from: '"Job 📧" <dingdong88700@gmail.com>', // sender address
+        from: '"Job Alert 📧" <dingdong88700@gmail.com>', // sender address
         to: "diddiq88@gmail.com", // list of receivers
         subject: subject, // Subject line
         text: `
@@ -37,6 +37,7 @@ router.post("/sendmail",async(req,res)=>{
         ${message}`,
         html:`<h3>Name: ${name}</h3>
         <h3>E-mail: ${mail}</h3>
+        <h3>Subject: ${subject}</h3>
         <h3><strong>Message:</strong></h3>
         <p>${message}</p>
         `
