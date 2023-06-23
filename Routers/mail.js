@@ -30,7 +30,16 @@ router.post("/sendmail",async(req,res)=>{
         from: '"pizza 👻" <dingdong88700@gmail.com>', // sender address
         to: "diddiq88@gmail.com", // list of receivers
         subject: subject, // Subject line
-        text: message, // plain text body
+        text: `
+        Name:${name}
+        E-mail:${mail}
+        Message:
+        ${message}`,
+        html:`<h3>Name:${name}</h3><br><br>
+        <h3>E-mail:${mail}</h3><br><br>
+        <h5><strong>Message:</h5><br>
+        <p>${message}</p>
+        `
       });
 
     console.log("Message sent: %s", info.messageId);
