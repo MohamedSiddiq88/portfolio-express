@@ -35,9 +35,9 @@ router.post("/sendmail",async(req,res)=>{
         E-mail:${mail}
         Message:
         ${message}`,
-        html:`<h3>Name:${name}</h3><br><br>
-        <h3>E-mail:${mail}</h3><br><br>
-        <h5><strong>Message:</h5><br>
+        html:`<h3>Name: ${name}</h3>
+        <h3>E-mail: ${mail}</h3>
+        <h3><strong>Message:</strong></h3>
         <p>${message}</p>
         `
       });
