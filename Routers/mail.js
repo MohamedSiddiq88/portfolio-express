@@ -21,7 +21,7 @@ router.post("/checkmail",async(req,res)=>{
         service: "gmail",
         auth: {
           user: "dingdong88700@gmail.com",
-          pass: "pmemknizydkvxuul",
+          pass: "hoboxnbprolqybsn",
         },
       });
   
