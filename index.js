@@ -21,7 +21,7 @@ app.get("/",(req,res)=>{
     res.send("Welocome to Portfolio World")
 })
 app.use("/users",usersRouter)   
-app.use("/sendmail",mailRouter)   
+app.use("/mail",mailRouter)   
 
 
 
